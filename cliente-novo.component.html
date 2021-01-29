@@ -1,0 +1,54 @@
+
+
+<h4>Novo Cliente</h4>
+
+<fieldset>
+<form class="cadastro">
+  <div class="form-row">
+    <div class="col">
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control"  #clienteNome required id="nome" />
+    </div>
+      <div class="col">
+        <label for="apelido">Apelido</label>
+        <input type="text" class="form-control"  #clienteApelido id="apelido" />
+      </div>
+      <div class="col">
+        <label for="nomeSocial">Nome Social</label>
+        <input type="text" class="form-control"  #clienteNomeSocial id="nomeSocial" />
+      </div>
+    <div class="col">
+      <label for="email">E-mail</label>
+      <input type="text" class="form-control"  #clienteEmail required id="email" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <label for="cpf">CPF</label>
+      <input type="text" class="form-control" width="11"  #clienteCpf required id="cpf" />
+    </div>
+    <div class="col">
+      <label for="telefone">Telefone</label>
+      <input type="text" class="form-control" #clienteTelefone id="telefone" />
+    </div>
+   
+      </div>
+  <div class="form-row">
+    <div class="col">
+      <label for="sexo">Sexo</label>
+      <input type="text" class="form-control"  #clienteSexo id="sexo" />
+    </div>
+    <div class="col">
+      <label for="dataNascimento">Data de Nascimento</label>
+      <input type="date" class="form-control"  #clienteDataNascimento id="dataNascimento" />
+    </div>
+  </div> <br />
+  <button (click)="add(clienteNome.value,clienteCpf.value,clienteEmail.value,
+  clienteDataNascimento.value,clienteSexo.value,clienteNomeSocial.value,
+  clienteApelido.value,clienteTelefone.value); clienteNome.value='';clienteCpf.value='';
+  clienteEmail.value='';clienteDataNascimento.value='';clienteSexo.value='';
+  clienteNomeSocial.value='';clienteApelido.value='';
+  clienteTelefone.value=''" class="btn btn-success"> Adicionar </button>
+  <input type="reset" value="Limpar" class="reset btn btn-warning" />
+</form>
+</fieldset>

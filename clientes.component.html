@@ -1,0 +1,10 @@
+<h2>Clientes</h2>
+<a routerLink="/novoCliente">Novo Cliente</a>
+<ul class="cli">
+  <li *ngFor="let item of clientes">
+    <a routerLink="/detalhe-cliente/{{item.id}}">
+      <span class="badge">{{item.id}}</span> {{item.nome}}
+    </a>
+    <button class="delete" title="excluir" (click)="delete(item)">EXCLUIR</button>
+  </li>
+</ul>
